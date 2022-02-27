@@ -1,0 +1,83 @@
+* {
+  box-sizing: border-box;
+}
+
+.app_header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 10px;
+}
+.infectedYellow {
+  border-bottom: 5px solid #ffa500;
+}
+.recoveredGreen {
+  border-bottom: 5px solid #228b22;
+}
+
+.deathsRed {
+  border-bottom: 5px solid red;
+}
+.criticalOrange {
+  border-bottom: 5px solid #793c32;
+}
+.app_stats {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 15px;
+}
+
+.app__information {
+  width: 20vw;
+  height: 50vh;
+  overflow: scroll;
+  padding: 20px;
+}
+
+.chartWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 5px;
+}
+
+@media (max-width: 990px) {
+  .app {
+    flex-direction: column;
+  }
+}
+.flagBox {
+  width: 10vw;
+  background-color: white;
+  text-align: center;
+  height: 17vh;
+  margin: 5px;
+
+  z-index: 200;
+  box-shadow: 0 30px 60px 0 rgba(90, 116, 148, 0.4);
+}
+.App {
+  width: 85vw;
+  height: 94vh;
+  padding: 20px;
+  margin: 20px auto;
+  background-color: #8ec5fc;
+  background-image: linear-gradient(
+    62deg,
+    #8ec5fc 0%,
+    #e0c3fc 33%,
+    #fbdede 66%,
+    #fcf3f3 100%
+  );
+
+  z-index: 300;
+  box-shadow: 0 50px 80px 0 rgba(90, 116, 148, 0.4);
+  text-align: center;
+  border-radius: 25px;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+}
