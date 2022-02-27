@@ -10,7 +10,6 @@ import "./App.css";
 import InfoBox from "./InfoBox";
 import ActiveCases from "./ActiveCases";
 import { sortData } from "./Util";
-/* import MyMap from "./MyMap"; */
 
 import "leaflet/dist/leaflet.css";
 
@@ -23,10 +22,6 @@ function App() {
   const [flag, setFlag] = useState("");
   const [countryName, setCountryName] = useState("");
   const [tableData, setTableData] = useState([]);
-
-  /*   const [mapCenter, setMapCenter] = useState({ lat: 34.80746, lng: -40.4796 });
-  const [mapZoom, setMapZoom] = useState(3);
-  const [mapCountries, setMapCountries] = useState([]); */
 
   useEffect(() => {
     fetch("https://disease.sh/v3/covid-19/all")
@@ -49,7 +44,6 @@ function App() {
 
           setCountries(countries);
           setTableData(sortData(data));
-          /*  setMapCountries(data); */
         });
     };
 
@@ -58,7 +52,7 @@ function App() {
 
   const onCountryChange = async (event) => {
     const countryCode = event.target.value;
-    /* console.log(countryCode); */
+
     const url =
       countryCode === "worldwide"
         ? "https://disease.sh/v3/covid-19/all"
@@ -78,12 +72,7 @@ function App() {
       .then((data) => {
         setCountry(countryCode);
         setCountryInfo(data);
-        /*   setMapCenter([data.countryInfo.lat, data.countryInfo.long]);
-        setMapZoom(4); */
       });
-    /*    console.log("******");
-    console.log(countryCode);
-  */
   };
   const chartData = [
     { name: "Infected", value: countryInfo.cases, fill: "#ffa500" },
@@ -179,9 +168,6 @@ function App() {
 
         <Chart chartData={chartData} />
       </div>
-      {/* <div>
-        <MyMap countries={mapCountries} center={mapCenter} zoom={mapZoom} />
-      </div> */}
     </div>
   );
 }
