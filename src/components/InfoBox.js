@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Card, CardContent, Typography } from "@material-ui/core";
-import "./App.css";
+import "../App.css";
 
 import CountUp from "react-countup";
 function InfoBox({ title, cases, total, boxStyle, fontColor }) {

@@ -1,5 +1,5 @@
 import React from "react";
-import "./ActiveCases.css";
+import "../ActiveCases.css";
 
 function ActiveCases({ countries }) {
   return (

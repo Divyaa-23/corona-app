@@ -49,17 +49,16 @@
 }
 .flagBox {
   width: 10vw;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.9);
   text-align: center;
   height: 17vh;
   margin: 5px;
-
   z-index: 200;
   box-shadow: 0 30px 60px 0 rgba(90, 116, 148, 0.4);
 }
 .App {
   width: 85vw;
-  height: 94vh;
+  height: 99vh;
   padding: 20px;
   margin: 20px auto;
   background-color: #8ec5fc;

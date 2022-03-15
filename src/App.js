@@ -7,13 +7,11 @@ import {
   CardContent,
 } from "@material-ui/core";
 import "./App.css";
-import InfoBox from "./InfoBox";
-import ActiveCases from "./ActiveCases";
-import { sortData } from "./Util";
+import InfoBox from "./components/InfoBox";
+import ActiveCases from "./components/ActiveCases";
+import { sortData } from "./components/Util";
 
-import "leaflet/dist/leaflet.css";
-
-import Chart from "./Chart";
+import Chart from "./components/Chart";
 
 function App() {
   const [countries, setCountries] = useState([]);
@@ -93,7 +91,7 @@ function App() {
       <div className="app_header">
         <FormControl className="app_dropdown">
           <Select variant="outlined" value={country} onChange={onCountryChange}>
-            <MenuItem value="worldwide"> Worldwide</MenuItem>
+            <MenuItem value="worldwide">Worldwide</MenuItem>
             {/* loop through all countries and display as a dropdown list */}
             {countries.map((country) => (
               <MenuItem
@@ -110,7 +108,7 @@ function App() {
       <div className="app_stats">
         {flag !== "" ? (
           <div className="flagBox">
-            <img src={flag} alt="Country Flag" />
+            <img width="188px" height="100px" src={flag} alt="Country Flag" />
             <h1
               style={{
                 padding: "5px",

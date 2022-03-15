@@ -21,7 +21,6 @@
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
     "countup": "^1.8.2",
-    "daisyui": "^1.21.0",
     "gh-pages": "^3.2.3",
     "leaflet": "^1.7.1",
     "numeral": "^2.0.6",
