@@ -108,7 +108,7 @@ function App() {
       <div className="app_stats">
         {flag !== "" ? (
           <div className="flagBox">
-            <img width="188px" height="100px" src={flag} alt="Country Flag" />
+            <img width="185px" height="100px"  src={flag} alt="Country Flag" />
             <h1
               style={{
                 padding: "5px",
